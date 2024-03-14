@@ -1,12 +1,10 @@
 import askUser from "./askUser.js";
 
 const songsTitles = ["Flatlands", "Prisoners", "Hunter's moon", "One"];
-const userSong = Number(askUser("Enter song position: "));
+const songPosition = Number(askUser("Enter song position: "));
 
-console.log(userSong);
-
-if (userSong >= 1 && userSong <= songsTitles.length) {
-  console.log(songsTitles.at(userSong - 1));
+if (songPosition >= 1 && songPosition <= songsTitles.length) {
+  console.log(songsTitles.at(songPosition - 1));
 } else {
-  console.log("Error");
+  console.log(`Error, there is no song at position ${songPosition}.`);
 }
